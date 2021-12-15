@@ -1,0 +1,3 @@
+docker-compose up -d --build
+Если файлвол, то открыть 5000 порт
+ip_your_server:5000/parser/cdiscount/?url=
