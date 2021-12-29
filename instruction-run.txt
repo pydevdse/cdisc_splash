@@ -1,3 +1,8 @@
 docker-compose up -d --build
 Если файлвол, то открыть 5000 порт
 ip_your_server:5000/parser/cdiscount/?url=
+
+proxy=[protocol://][user:password@]proxyhost[:port]
+
+для просмотра логов 
+docker logs cdiscount_splash_parser_1 -f
