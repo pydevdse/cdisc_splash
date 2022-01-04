@@ -44,9 +44,12 @@ class Cdiscount_requests:
                 "wait": 5,
                 "js_enabled": True,
                 "redirect": True,
+                "clear_cookies":True,
                 "User-Agent": USER_AGENT[randint(0, len(USER_AGENT) - 1)],
             },
         )
+        cash = session.post("http://splash:8050/_gc")
+        logging.info(f'Cash clean {cash}')
         try:
             tree = html.fromstring(response.content)
         except Exception as e:
