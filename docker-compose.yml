@@ -3,6 +3,7 @@ version: "3.9"
 services:
         
   parser:
+    restart: always
     build:
       context: ./cdiscount/
     ports:
@@ -11,6 +12,7 @@ services:
       - splash 
 
   splash:
+    restart: always
     image: scrapinghub/splash
     ports:
     - "8055:8050"
