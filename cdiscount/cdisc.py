@@ -30,7 +30,7 @@ class Cdiscount_requests:
         session.proxies = proxies
         return session
 
-    def parse(self, url, proxy):
+    def parse(self, url, proxy=None):
         session = self.get_session(url)
         splash_url = "http://splash:8050/render.html"
         response = session.get(
